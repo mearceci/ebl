@@ -1,3 +1,6 @@
+library(devtools)
+library(roxygen2)
+
 anova_stat <- function(data, grpcol=1, varcol=3){
   var=as.vector(unique(data[,varcol]))
   d=data.frame()
