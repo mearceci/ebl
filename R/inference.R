@@ -2,7 +2,7 @@
 #'
 #'Task
 #'
-#'@param data
+#'@param
 #'@return gammna
 #'@export
 mom_gamma <- function(sample_g){
