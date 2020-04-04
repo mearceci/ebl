@@ -1,7 +1,7 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 
-#Github stuffs
+# Github stuffs
 .gitignore
-.README.MD
+README.md
 .Rhistory
