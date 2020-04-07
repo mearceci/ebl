@@ -7,7 +7,7 @@
 S.N_ratio(data, Threshold = 0.001)
 }
 \arguments{
-\item{raman}{spectrumdata and set threshold}
+\item{data, }{spectrumdata and set threshold}
 }
 \value{
 check ramna intensity whether signal or not and noise clearing
