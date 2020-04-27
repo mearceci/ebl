@@ -25,6 +25,7 @@ add_kendrick <- function(ftmsObj, base_compounds = 'CH2'){
   # make new column names for e_meta
   mass_cols = sapply(base_compounds, function(base) paste0('kmass.', base))
   defect_cols = sapply(base_compounds, function(base) paste0('kdefect.', base))
+  nominal_cols=sapply(base_compounds, function(base) paste0('Nominal_K.', base))
   # calculate kendrick masses for each base...
   masses = as.numeric(as.character(exmass[,4])) %*% t(coefs)
   # ... workaround for a quick when storing a single column matrix in a dataframe column ...
@@ -34,5 +35,6 @@ add_kendrick <- function(ftmsObj, base_compounds = 'CH2'){
 
   # calculate kendrick defect #
   exmass[defect_cols] = ceiling(exmass[mass_cols]) - exmass[mass_cols]
+  exmass[nominal_cols] = round(masses)
   return(exmass)
 }
