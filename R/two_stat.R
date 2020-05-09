@@ -1,4 +1,4 @@
-#'Perform t-test repeatly
+#'Perform t-test according to normality
 #'
 #'using use data
 #'@param data:input data, grpcol:column number of group, varcol: column of number of variable, var.opt=Var.equal in t.test
