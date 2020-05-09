@@ -1,10 +1,11 @@
 #'Perform t-test according to normality
 #'
 #'using use data
-#'@param data:input data, grpcol:column number of group, varcol: column of number of variable, var.opt=Var.equal in t.test
+#'@param  grpcol: column number of group, varcol: column of number of variable, var.opt=Var.equal in t.test
+#'@param  varcol: column of number of variable, var.opt=Var.equal in t.test
 #'@return compare two group with p.val according to variable
 #'@export
-two_stat <- function(data, grpcol=1, varcol=3, var.opt=T){
+two_stat <- function(data, grpcol=1, varcol=3, var.opt=F){
   var=as.vector(unique(data[,varcol]))
   d=data.frame()
   for (i in 1:length(var)) {
